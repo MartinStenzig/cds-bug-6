@@ -1,0 +1,37 @@
+{
+  "name": "cds-bug-6",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^3.12.1",
+    "@sap-cloud-sdk/http-client": "^3.12.1",
+    "@sap-cloud-sdk/resilience": "^3.12.1",
+    "@sap/cds": "^7",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "SAP_S4V_MAINTORDER_V2": {
+        "kind": "odata-v2",
+        "model": "srv/external/SAP_S4V_MAINTORDER_V2",
+        "csrf": true,
+        "csrfInBatch": true
+      },
+      "SAP_S4V_MAINTORDER_V1": {
+        "kind": "odata-v2",
+        "model": "srv/external/SAP_S4V_MAINTORDER_V1",
+        "csrf": true,
+        "csrfInBatch": true
+      }
+    }
+  }
+}

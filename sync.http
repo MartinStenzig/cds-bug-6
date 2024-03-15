@@ -1,0 +1,10 @@
+
+
+
+@server=http://localhost:4004
+@service=/odata/v4/sync
+
+
+### SAP Test Call
+GET {{server}}{{service}}/sapWorkOrder?$select=MaintenanceOrder,MaintenanceOrderDesc&$top=150
+
